@@ -1,0 +1,24 @@
+﻿@model IEnumerable<staj.Models.Product>
+
+<h2>Product List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Product/Create" class="btn btn-primary">Add New Product</a>
